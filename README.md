@@ -16,6 +16,8 @@ This image contains the components for running a dedicated 'Command & Conquer - 
 
 ## tl;dr
 ```bash
+git clone https://github.com/AndreasFerdinand/CombinedArms-DockerServer.git
+cd CombinedArms-DockerServer
 docker build --progress=plain -t "andreasferdinand/cnc-ca-server:1.04" .
 docker run -d --rm -p 1234:1234 \
   -e name="CnC-CA-Server by AndreasFerdinand" \
@@ -35,7 +37,7 @@ docker run -d --rm -p 1234:1234 \
     Either download the file with your browser or use `curl` to get it on your computer.
 
     ```bash
-    curl https://raw.githubusercontent.com/AndreasFerdinand/CombinedArms-DockerServer/main/Dockerfile -o Dockerfile
+    curl https://raw.githubusercontent.com/AndreasFerdinand/CombinedArms-DockerServer/refs/heads/main/Dockerfile -o Dockerfile
     ```
 
 3. Build the image
