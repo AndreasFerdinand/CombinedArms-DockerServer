@@ -23,6 +23,7 @@ docker run -d --rm -p 1234:1234 \
   -e name="CnC-CA-Server by AndreasFerdinand" \
   -e ListenPort="1234" \
   -e Password="quertzui" \
+  -e EnableSingleplayer="true" \
   --name "cnc-ca-server" \
   andreasferdinand/cnc-ca-server:1.04
 ```
@@ -59,6 +60,7 @@ docker run -d --rm -p 1234:1234 \
     -e name="CnC-CA-Server by AndreasFerdinand" \
     -e ListenPort="1234" \
     -e Password="quertzui" \
+    -e EnableSingleplayer="true" \
     --name "cnc-ca-server" \
     andreasferdinand/cnc-ca-server:1.04
     ```
