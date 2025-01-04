@@ -4,6 +4,8 @@ set -e
 CNC_CA_RELEASE=1.4
 HOSTPORT=1234
 
+trap 'docker rm -f cnc-ca-server' SIGINT
+
 command -v curl >/dev/null 2>&1 || { echo >&2 "curl is required to run the tldr script"; exit 1; }
 command -v docker >/dev/null 2>&1 || { echo >&2 "docker is required to run the tldr script"; exit 1; }
 
@@ -25,7 +27,7 @@ echo -e "\033[1;32mDocker image successfully built. Starting server...\033[0m"
 echo -e "\033[1;32mConnect to Command and Conquer: Combined Arms server at localhost:${HOSTPORT} with password: ${PASSWORD}\033[0m"
 echo -e "\033[1;32mStop and remove the container with CTRL+C\033[0m"
 
-docker run -it --rm -p "${HOSTPORT}":1234 \
+docker run -t --rm -p "${HOSTPORT}":1234 \
   -e name="CnC-CA-Server by AndreasFerdinand" \
   -e ListenPort="1234" \
   -e Password="${PASSWORD}" \
