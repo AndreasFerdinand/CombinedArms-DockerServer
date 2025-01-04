@@ -39,7 +39,10 @@ RUN \
     rm /home/cnc-ca/cnc-ca.tar.gz && \
     cd /home/cnc-ca/source && \
     make && \
+    make version VERSION=${CNC_CA_RELEASE} && \
     apt-get clean && \
+    mkdir -p /home/cnc-ca/.config/openra/Logs && \
+    chown -R cnc-ca:cnc-ca /home/cnc-ca/.config/openra/ && \
     rm -rf /var/lib/apt/lists/*
 
 USER cnc-ca
