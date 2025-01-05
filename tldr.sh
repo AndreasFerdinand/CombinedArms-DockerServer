@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-CNC_CA_RELEASE=1.4
+CNC_CA_RELEASE=latest
 HOSTPORT=1234
 
 trap 'docker rm -f cnc-ca-server' SIGINT
