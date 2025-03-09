@@ -13,6 +13,7 @@ This image contains the components for running a dedicated 'Command & Conquer - 
 
 ## Related projects
 * [Dockerfile for an OpenRA dedicated server](https://github.com/rmoriz/openra-dockerfile)
+* [OpenRA Dedicated Server Docker Image](https://github.com/dkruyt/openra?tab=readme-ov-file)
 
 ## tl;dr
 Build & run 'Command & Conquer - Combined Arms' dedicated docker server in terminal mode. Default port `1234` is used and a simple password is set.
